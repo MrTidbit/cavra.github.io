@@ -1,0 +1,27 @@
+header {
+  background-color: #FFFFFF;
+  height:80px;
+
+	font-size: 12pt;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+header h1 {
+  margin: 0;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+	background: #EBEBEB;
+
+	text-align: center;
+}
+body h1 {
+	font-size: 12pt;
+	margin: 0;
+}
+body h2 {
+	font-size: 12pt;
+	margin: 0;
+	text-align: right;
+}
