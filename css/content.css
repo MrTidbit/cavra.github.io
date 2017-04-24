@@ -1,11 +1,3 @@
-html { 
-	background: url(../images/background.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -49,6 +41,6 @@ img.profile {
 }
 
 h1 {
-	color: white;
+	color: black;
     font-size: 48px;
 }
