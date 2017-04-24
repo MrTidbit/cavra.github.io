@@ -6,13 +6,7 @@ html {
 	background-size: cover;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Cinzel', serif;
-}
-
-ul.navBar {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -20,11 +14,11 @@ ul.navBar {
     background-color: #333;
 }
 
-li {
+nav li {
     float: right;
 }
 
-li a {
+nav li a {
     display: block;
     color: white;
     text-align: center;
@@ -32,7 +26,7 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+nav li a:hover {
     background-color: #222;
 }
 
@@ -40,7 +34,13 @@ li a:hover {
     background-color: #4CAF50;
 }
 
-img.profile {
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+}
+
+#profilePic {
 	border-radius: 100%;
 	border: 2px solid black;
 	margin-top: 50px;
@@ -53,38 +53,16 @@ h1 {
     font-size: 48px;
 }
 
-iframe {
-    margin: 0;
-    padding: 0;
-    margin-top: 20px;
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-
-    border: solid black;
-    border-radius: 3%;
-    background: rgba(255, 255, 255, 0.6);
-
-    width: 80%;
-    height: 80%;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
 }
-
-object {
-    margin: 0;
-    padding: 0;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-
-    border: solid black;
-    border-radius: 3%;
-    background: rgba(255, 255, 255, 0.6);
-
-    width: 500;
-    height: 600;
-}
-
