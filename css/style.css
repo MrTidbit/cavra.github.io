@@ -90,16 +90,23 @@ nav li {
 }
 
 /* List Item */
-nav li a {
+nav li {
     display: block;
+    border: none;
+
+    background-color: transparent;
     color: var(--main-text-color);
+
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    cursor: pointer;
+
+    display: inline-block;
 }
 
 /* Hover item color */
-nav li a:hover {
+nav li:hover {
     background-color: var(--comp-color);
 }
 
@@ -153,6 +160,8 @@ body {
 #contentFrame {
     padding: 0px;
     margin: 20px;
+
+    overflow: hidden; 
 
     border: none;
 }
