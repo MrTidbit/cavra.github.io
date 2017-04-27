@@ -123,26 +123,6 @@ body {
     color: var(--main-text-color);
 }
 
-#intro {
-    opacity: 0;
-    margin: auto;
-
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
-
-    animation-timing-function: linear;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;  
-
-}
-
-#intro #profilePic {
-    animation-delay: 2s;
-}
-
 #content {
     opacity: 0;
     margin: auto;
@@ -151,7 +131,7 @@ body {
     margin-left: 90px;
     margin-bottom: 140px;
 
-    padding: 20px;
+    padding: 0px;
 
     border-radius: 25px;
     border: 1px solid var(--main-text-color);
@@ -169,22 +149,18 @@ body {
     background-color: var(--main-transparent-color);
 }
 
-/* Header 1 */
-#content h1 {
-    padding: 0px;
-    margin: 0px;
-    font-size: 48px;
+/* iFrame */
+#content iframe {
+/*    padding: 0px;
+    margin: 20px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    
+    background-color: red;*/
 }
 
-/* Profile Picture */
-#profilePic {
-	border-radius: 100%;
-    border: 1px solid var(--main-text-color);
-	width: 150px;
-	height: 150px;
-}
-
-/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------
 
 
 /*----------------------------------------------------------------------------*/
