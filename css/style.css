@@ -1,0 +1,174 @@
+/*----------------------------------------------------------------------------*/
+/* Global Stuff */
+/*----------------------------------------------------------------------------*/
+
+/* Background */
+html { 
+	background: url(../images/background.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* Zelda Font! */
+@font-face { font-family: Chairo; src: url('../font/Chairo.otf'); } 
+
+/* Variables from http://www.colorcombos.com/color-schemes/194/ColorCombo194.html */
+:root {
+  --main-color: #242E35;
+  --comp-color: #4A7B6F;
+  --main-text-color: #EEEEE7;
+  --main-transparent-color: rgba(36, 46, 53, 0.95);
+}
+
+/* Custom Highlight Color (Hacker green on black) */
+::selection { /* Common browsers */
+    background-color: #000000;
+    color: #20C20E;
+}
+::-moz-selection { /* Firefox browsers */
+    background-color: #000000;
+    color: #20C20E;
+}
+/*----------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------*/
+/* Header */
+/*----------------------------------------------------------------------------*/
+
+nav {
+    /*position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;*/
+}
+
+/* Navigation Bar Unordered List */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--main-color);
+}
+
+/* List Item */
+nav li {
+    float: right;
+}
+
+/* List Item */
+nav li a {
+    display: block;
+    color: var(--main-text-color);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Hover item color */
+nav li a:hover {
+    background-color: var(--comp-color);
+}
+
+/* Active item Color */
+.active {
+    background-color: var(--comp-color);
+}
+/*----------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------*/
+/* Body */
+/*----------------------------------------------------------------------------*/
+
+/* Body */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Chairo';
+    color: var(--main-text-color);
+}
+
+#content {
+    margin: auto;
+    margin-top: 35px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 150px;
+
+    padding: 20px;
+
+    border-radius: 25px;
+    border: 1px solid var(--main-text-color);
+
+    background-color: var(--main-transparent-color);
+}
+
+/* Header 1 */
+#content h1 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 48px;
+}
+
+/* Profile Picture */
+#profilePic {
+	border-radius: 100%;
+    border: 1px solid var(--main-text-color);
+	width: 150px;
+	height: 150px;
+}
+
+/*----------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------*/
+/* Footer */
+/*----------------------------------------------------------------------------*/
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    padding: 0px;
+    margin: 0px;
+
+    background-color: var(--main-color);
+    text-align: center;
+}
+
+/* Footer unordered list */
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* List item */
+footer li {
+    text-align: center;
+    display: inline;
+}
+
+/* List item */
+footer li a {
+    padding: 15px;
+    width: 15px;
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+
+/* Hover item color */
+.fa:hover {
+    background-color: var(--comp-color);
+}
+/*----------------------------------------------------------------------------*/
+
