@@ -28,15 +28,7 @@
 
 		<!-- Content -->
 		<div id="content">
-			<iframe id="form-iframe" src="html/home.html" style="margin:0; width:100%; height:150px; border:none; overflow:hidden;" scrolling="no" onload="AdjustIframeHeightOnLoad()"></iframe>
-			<script type="text/javascript">
-				function AdjustIframeHeightOnLoad() { 
-					document.getElementById("form-iframe").style.height = document.getElementById("form-iframe").contentWindow.document.body.scrollHeight + "px"; 
-				}
-				function AdjustIframeHeight(i) { 
-					document.getElementById("form-iframe").style.height = parseInt(i) + "px"; 
-				}
-			</script>
+			<iframe id="contentFrame" src="html/home.html" scrolling="no" onload="iFrameResize()"></iframe>
 		</div>
 
 		<!-- Footer -->
@@ -49,5 +41,8 @@
 				<li><a href="https://github.com/cavra" class="fa fa-github"></a></li>
 			</ul>
 		</footer>
+
+		<!-- Scripts (Keep down here for optimal loading times!) -->
+		<script src="js/iframe.js"></script>
 	</body>
 </html>
