@@ -5,6 +5,7 @@
 /* Background */
 html {
     height: 100%;
+    background-color: transparent;
 }
 
 /* Zelda Font! */
@@ -68,10 +69,11 @@ html {
 body {
     margin: 0;
     padding: 0;
+
     height: auto;
     overflow: auto;
+    
     font-family: 'Chairo';
-    background-color: red;
 }
 
 /* Header 1 */
