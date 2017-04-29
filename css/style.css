@@ -9,16 +9,21 @@ html {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+
+    background-blend-mode: 5px;
 }
 
-/* Zelda Font! */
-@font-face { font-family: Chairo; src: url('../font/Chairo.otf'); } 
+/* Zelda Font! (Need to change, doesn't actually display?) */
+@font-face { 
+    font-family: Chairo; src: url('../font/Chairo.otf'); 
+} 
 
 /* Variables from http://www.colorcombos.com/color-schemes/194/ColorCombo194.html */
 :root {
   --main-color: #242E35;
   --comp-color: #4A7B6F;
   --main-text-color: #EEEEE7;
+  --main-bg-color: #CCDDDD;
   --main-transparent-color: rgba(36, 46, 53, 0.85);
 }
 
@@ -61,6 +66,7 @@ html {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
 /*----------------------------------------------------------------------------*/
 
 
@@ -68,11 +74,28 @@ html {
 /* Header */
 /*----------------------------------------------------------------------------*/
 
-nav {
-    /*position: fixed;
+#navContainer::before {
+    background: url(../images/background.jpg) 0 / cover fixed;
+    content: '';
+    position: absolute;
     top: 0;
     right: 0;
-    left: 0;*/
+    bottom: 0;
+    left: 0;
+    filter: blur(15px);
+    z-index: -1;
+}
+
+#navContainer {
+    position: relative;
+
+    background: hsla(0,0%,100%,.3);
+    box-shadow: 5px 3px 30px black;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
 }
 
 /* Navigation Bar Unordered List */
@@ -81,28 +104,27 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: var(--main-color);
 }
 
-/* List Item */
+/* List Item Navigation Links */
 nav li {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+
     float: right;
-}
-
-/* List Item */
-nav li {
-    display: block;
     border: none;
 
     background-color: transparent;
     color: var(--main-text-color);
 
-    text-align: center;
-    padding: 14px 16px;
+    padding: 10px 14px;
     text-decoration: none;
     cursor: pointer;
+}
 
-    display: inline-block;
+nav li.iconTab {
+    float: left;
 }
 
 /* Hover item color */
@@ -110,10 +132,6 @@ nav li:hover {
     background-color: var(--comp-color);
 }
 
-/* Active item Color */
-.active {
-    background-color: var(--comp-color);
-}
 /*----------------------------------------------------------------------------*/
 
 
@@ -130,21 +148,8 @@ body {
     color: var(--main-text-color);
 }
 
-#content {
-    padding: 0px;
-    margin-top: 70px;
-    margin-right: 90px;
-    margin-left: 90px;
-    margin-bottom: 140px;
-
-    border-radius: 25px;
-    border: 1px solid var(--main-text-color);
-
+#contentWindowContainer {
     opacity: 0;
-    background-color: var(--main-transparent-color);
-
-    text-align: center;
-
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
         -ms-animation: fadein 2s; /* Internet Explorer */
@@ -153,7 +158,34 @@ body {
 
     animation-timing-function: linear;
     animation-delay: 1s;
-    animation-fill-mode: forwards;  
+    animation-fill-mode: forwards;
+}
+
+#contentWindow::before {
+    background: url(../images/background.jpg) 0 / cover fixed;
+    content: '';
+    margin: -35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: blur(15px);
+    z-index: -1;
+}
+
+#contentWindow {
+    margin: 100px auto;
+    position: relative;
+
+    background: hsla(0,0%,100%,.3);
+    box-shadow: 5px 3px 30px black;
+
+    border-radius: 10px;
+    width: 60%;
+    overflow: hidden;
+
+    text-align: center;
 }
 
 /* iFrame */
@@ -161,9 +193,8 @@ body {
     padding: 0px;
     margin: 20px;
 
-    overflow: hidden; 
-
     border: none;
+    overflow: hidden; 
 }
 
 /*----------------------------------------------------------------------------

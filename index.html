@@ -6,7 +6,7 @@
 
 		<!-- Set website title and icon -->
 		<title>Cory Avra</title>
-		<link rel="icon" href="images/favicon.ico">
+		<link rel="icon" href="images/favicon.png">
 
 		<!-- Add stylesheets and libraries -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -15,20 +15,24 @@
 
 	<body>
 		<!-- Header -->
-		<nav>
-			<ul>
-				<li style="float:left" class="active">CA</li>
-				<li onclick="setSource('html/contact.html')">Contact</li>
-				<li onclick="setSource('html/work.html')">Work</li>
-				<li onclick="setSource('html/resume.html')">Resume</li>
-				<li onclick="setSource('html/about.html')">About</li>
-				<li onclick="setSource('html/home.html')">Home</li>
-			</ul>
-		</nav>
+		<div id="navContainer">
+			<nav>
+				<ul>
+					<li class="iconTab">CA</li>
+					<li onclick="setSource('html/contact.html')">Contact</li>
+					<li onclick="setSource('html/work.html')">Work</li>
+					<li onclick="setSource('html/resume.html')">Resume</li>
+					<li onclick="setSource('html/about.html')">About</li>
+					<li onclick="setSource('html/home.html')">Home</li>
+				</ul>
+			</nav>
+		</div>
 
 		<!-- Content -->
-		<div id="content">
-			<iframe id="contentFrame" src="html/home.html" onload="iFrameResize()"></iframe>
+		<div id="contentWindowContainer">
+			<div id="contentWindow">
+				<iframe id="contentFrame" src="html/home.html" onload="iFrameResize()"></iframe>
+			</div>
 		</div>
 
 		<!-- Footer -->

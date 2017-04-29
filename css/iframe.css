@@ -74,21 +74,19 @@ body {
     overflow: auto;
     
     font-family: 'Chairo';
-}
-
-/* Header 1 */
-h1 {
-    padding: 0px;
-    margin: 0px;
-    font-size: 48px;
+    color: var(--main-text-color);
 }
 
 /* Profile Picture */
 #profilePic {
+    margin-right: 15px;
+    margin-bottom: 15px;
+
 	border-radius: 100%;
     border: 1px solid var(--main-text-color);
 	width: 150px;
 	height: 150px;
+    float: left;
 }
 
 /*----------------------------------------------------------------------------*/
