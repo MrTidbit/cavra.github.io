@@ -190,9 +190,7 @@ body {
 
 /* iFrame */
 #contentFrame {
-    padding: 0px;
-    margin: 20px;
-
+    width: 100%;
     border: none;
     overflow: hidden; 
 }

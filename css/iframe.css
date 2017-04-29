@@ -79,8 +79,7 @@ body {
 
 /* Profile Picture */
 #profilePic {
-    margin-right: 15px;
-    margin-bottom: 15px;
+    margin: 15px;
 
 	border-radius: 100%;
     border: 1px solid var(--main-text-color);
