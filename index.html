@@ -15,8 +15,8 @@
 
 	<body>
 		<!-- Header -->
-		<div id="navContainer">
-			<nav>
+		<div id="headerContainer" class="container">
+			<div id="headerWindow" class="window">
 				<ul>
 					<li class="iconTab">CA</li>
 					<li onclick="setSource('html/contact.html')">Contact</li>
@@ -25,26 +25,34 @@
 					<li onclick="setSource('html/about.html')">About</li>
 					<li onclick="setSource('html/home.html')">Home</li>
 				</ul>
-			</nav>
+			</div>
+		</div>
+
+		<!-- Sidebar -->
+		<div id="sideBarContainer" class="container">
+			<div id="sideBarWindow" class="window">
+			</div>
 		</div>
 
 		<!-- Content -->
-		<div id="contentWindowContainer">
-			<div id="contentWindow">
+		<div id="contentContainer" class="container">
+			<div id="contentWindow" class="window">
 				<iframe id="contentFrame" src="html/home.html" onload="iFrameResize()"></iframe>
 			</div>
 		</div>
 
 		<!-- Footer -->
-		<footer>
-			<ul>
-				<li><a href="https://www.facebook.com/cory.avra" class="fa fa-facebook"></a></li>
-				<li><a href="https://twitter.com/Just_Avrage" class="fa fa-twitter"></a></li>
-				<li><a href="https://www.instagram.com/cory.avra/" class="fa fa-instagram"></a></li>
-				<li><a href="https://www.linkedin.com/in/cory-avra/" class="fa fa-linkedin"></a></li>
-				<li><a href="https://github.com/cavra" class="fa fa-github"></a></li>
-			</ul>
-		</footer>
+		<!-- <div id="footerContainer" class="container">
+			<div id="footerWindow" class="window">
+				<ul>
+					<li><a href="https://www.facebook.com/cory.avra" class="fa fa-facebook"></a></li>
+					<li><a href="https://twitter.com/Just_Avrage" class="fa fa-twitter"></a></li>
+					<li><a href="https://www.instagram.com/cory.avra/" class="fa fa-instagram"></a></li>
+					<li><a href="https://www.linkedin.com/in/cory-avra/" class="fa fa-linkedin"></a></li>
+					<li><a href="https://github.com/cavra" class="fa fa-github"></a></li>
+				</ul>
+			</div>
+		</div> -->
 
 		<!-- Scripts (Keep down here for optimal loading times!) -->
 		<script src="js/iframe.js"></script>

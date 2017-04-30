@@ -3,14 +3,38 @@
 /*----------------------------------------------------------------------------*/
 
 /* Background */
-html { 
-	background: url(../images/background.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+html {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
 
-    background-blend-mode: 5px;
+html:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: 
+        #fff 
+        url(../images/background.jpg) 
+        no-repeat 
+        center
+        center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+          
+    filter: blur(6px);
+    transform: scale(1.1);
 }
 
 /* Zelda Font! (Need to change, doesn't actually display?) */
@@ -24,7 +48,7 @@ html {
   --comp-color: #4A7B6F;
   --main-text-color: #EEEEE7;
   --main-bg-color: #CCDDDD;
-  --main-transparent-color: rgba(36, 46, 53, 0.85);
+  --main-transparent-color: rgba(36, 46, 53, 0.3);
 }
 
 /* Custom Highlight Color (Hacker green on black) */
@@ -74,32 +98,24 @@ html {
 /* Header */
 /*----------------------------------------------------------------------------*/
 
-#navContainer::before {
-    background: url(../images/background.jpg) 0 / cover fixed;
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    filter: blur(15px);
-    z-index: -1;
-}
-
-#navContainer {
+#headerContainer {
     position: relative;
+    overflow: hidden;
 
-    background: hsla(0,0%,100%,.3);
+/*  align-items: center;
+  justify-content: center;
+*/
     box-shadow: 5px 3px 30px black;
 }
 
-nav {
+#headerWindow {
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 /* Navigation Bar Unordered List */
-nav ul {
+#headerWindow ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -107,13 +123,10 @@ nav ul {
 }
 
 /* List Item Navigation Links */
-nav li {
+#headerWindow li {
     display: inline-block;
     vertical-align: middle;
     text-align: center;
-
-    float: right;
-    border: none;
 
     background-color: transparent;
     color: var(--main-text-color);
@@ -123,12 +136,12 @@ nav li {
     cursor: pointer;
 }
 
-nav li.iconTab {
+#headerWindow li.iconTab {
     float: left;
 }
 
 /* Hover item color */
-nav li:hover {
+#headerWindow li:hover {
     background-color: var(--comp-color);
 }
 
@@ -143,12 +156,31 @@ nav li:hover {
 body {
     margin: 0;
     padding: 0;
+
+    width: 100%;
     height: 100%;
+
     font-family: 'Chairo';
     color: var(--main-text-color);
 }
 
-#contentWindowContainer {
+#contentContainer {
+    margin: auto;
+    padding: 0px;
+
+    height: 70%;
+    width: 70%;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    border-radius: 15px;
+    box-shadow: 5px 3px 30px black;
+    overflow: hidden;
+
     opacity: 0;
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -161,38 +193,26 @@ body {
     animation-fill-mode: forwards;
 }
 
-#contentWindow::before {
-    background: url(../images/background.jpg) 0 / cover fixed;
-    content: '';
-    margin: -35px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    filter: blur(15px);
-    z-index: -1;
-}
-
 #contentWindow {
-    margin: 100px auto;
-    position: relative;
+    margin: 0px;
+    padding: 0px;
 
-    background: hsla(0,0%,100%,.3);
-    box-shadow: 5px 3px 30px black;
-
-    border-radius: 10px;
-    width: 60%;
-    overflow: hidden;
-
+    width: 100% auto;
+    height: 100% auto;
     text-align: center;
 }
 
 /* iFrame */
 #contentFrame {
+    margin: 0px;
+    padding: 0px;
+
+    position: relative;
+    display:block;
     width: 100%;
+    height: 400px;
+
     border: none;
-    overflow: hidden; 
 }
 
 /*----------------------------------------------------------------------------
@@ -202,22 +222,27 @@ body {
 /* Footer */
 /*----------------------------------------------------------------------------*/
 
-/* Footer */
-footer {
+#footerContainer {
     position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
 
+    box-shadow: 5px 3px 30px black;
+
+    overflow: hidden;
+}
+
+/* Footer */
+#footerWindow {
     padding: 0px;
     margin: 0px;
 
-    background-color: var(--main-color);
     text-align: center;
 }
 
 /* Footer unordered list */
-footer ul {
+#footerWindow ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -225,13 +250,13 @@ footer ul {
 }
 
 /* List item */
-footer li {
+#footerWindow li {
     text-align: center;
     display: inline;
 }
 
 /* List item */
-footer li a {
+#footerWindow li a {
     padding: 15px;
     width: 15px;
     text-decoration: none;
