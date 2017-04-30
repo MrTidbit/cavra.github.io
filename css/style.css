@@ -3,38 +3,8 @@
 /*----------------------------------------------------------------------------*/
 
 /* Background */
-html {
-    position: absolute;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
-
-html:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: 
-        #fff 
-        url(../images/background.jpg) 
-        no-repeat 
-        center
-        center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;  
-          
-    filter: blur(6px);
-    transform: scale(1.1);
+html { 
+    background-color: var(--main-bg-color);
 }
 
 /* Zelda Font! (Need to change, doesn't actually display?) */
@@ -91,6 +61,13 @@ html:before {
     to   { opacity: 1; }
 }
 
+.container {
+    background-color: var(--main-color);
+}
+
+.window {
+
+}
 /*----------------------------------------------------------------------------*/
 
 
@@ -101,11 +78,6 @@ html:before {
 #headerContainer {
     position: relative;
     overflow: hidden;
-
-/*  align-items: center;
-  justify-content: center;
-*/
-    box-shadow: 5px 3px 30px black;
 }
 
 #headerWindow {
@@ -178,8 +150,8 @@ body {
     right: 0;
 
     border-radius: 15px;
-    box-shadow: 5px 3px 30px black;
     overflow: hidden;
+    box-shadow: 5px 3px 30px black;
 
     opacity: 0;
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
