@@ -5,7 +5,6 @@ function setSource(url){
 	$(function() {
 		$(document.getElementById('contentContainer')).animate({opacity: 0}, 1000, function() {
 			contentFrame.src = url;
-			iFrameResize();
 		});
 	});
 
@@ -14,6 +13,7 @@ function setSource(url){
 	});
 }
 
+// Do I really want this?
 function iFrameResize() { 
-	contentFrame.style.height = contentFrame.contentWindow.document.body.scrollHeight + "px";
+	document.getElementById('contentContainer').style.height = document.getElementById('contentFrame').contentWindow.document.body.scrollHeight + "px";
 }

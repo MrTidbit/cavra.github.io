@@ -10,7 +10,7 @@ html {}
     font-family: Chairo; src: url('../font/Chairo.otf'); 
 } 
 
-/* Variables from http://www.colorcombos.com/color-schemes/194/ColorCombo194.html */
+/* Color Variables from http://www.colorcombos.com/color-schemes/194/ColorCombo194.html */
 :root {
   --main-color: #242E35;
   --comp-color: #4A7B6F;
@@ -38,18 +38,16 @@ body {
     height: 100%;
 
     font-family: 'Chairo';
-    color: var(--main-text-color);
 }
 
 /* Container Class */
 .container {
-    background-color: var(--main-color);
 }
 
 /* Window Class */
 .window {
-
 }
+
 /*----------------------------------------------------------------------------*/
 
 
@@ -80,70 +78,25 @@ body {
 
 /* List Item Navigation Links */
 #headerWindow li {
+    margin: 10px 20px;
+    padding: 4px 10px;
+
     display: inline-block;
     vertical-align: middle;
     text-align: center;
 
     background-color: transparent;
-    color: var(--main-text-color);
+    color: black;
 
-    padding: 10px 14px;
     text-decoration: none;
     cursor: pointer;
 }
 
 /* Hover item color */
 #headerWindow li:hover {
-    background-color: var(--comp-color);
+    color: #20C20E;    
 }
 
-/*----------------------------------------------------------------------------*/
-
-
-/*----------------------------------------------------------------------------*/
-/* SideBar */
-/*----------------------------------------------------------------------------*/
-
-/* Sidebar Container */
-#sideBarContainer {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: auto;
-    margin-left: 15px;
-    padding: 0px;
-
-    height: 70%;
-    width: 15%;
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 5px 3px 30px black;
-}
-
-/* Sidebar Window */
-#sideBarWindow {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-/* Sidebar Window Header */
-#sideBarWindowHeader {
-    margin: 0px;
-    padding: 0px;
-
-    width: 100% auto;
-    height: 25px;
-    text-align: center;
-
-    background-color: #f2f7ff;
-}
 /*----------------------------------------------------------------------------*/
 
 
@@ -178,8 +131,11 @@ body {
     padding: 0px;
 
     width: 100% auto;
-    height: 100% auto;
+    height: 100%;
     text-align: center;
+
+    background-color: black;
+    color: red;
 }
 
 /* Content Window Header */
@@ -187,11 +143,13 @@ body {
     margin: 0px;
     padding: 0px;
 
+    display: block;
     width: 100% auto;
     height: 25px;
     text-align: center;
 
     background-color: #f2f7ff;
+    color: black;
 }
 
 /* iFrame */
@@ -202,7 +160,7 @@ body {
     position: relative;
     display: block;
     width: 100%;
-    height: 400px;
+    height: 100%;
 
     border: none;
 }
@@ -242,8 +200,14 @@ body {
 
 /* List item */
 #footerWindow li {
+    margin: 0px;
+    padding: 0px;
+
+    display: inline-block;
+    vertical-align: middle;
     text-align: center;
-    display: inline;
+    font-size: 20px;
+
     cursor: pointer;
 }
 
@@ -252,13 +216,13 @@ body {
     padding: 15px;
     width: 15px;
     text-decoration: none;
-    color: var(--main-text-color);
+    color: black;
     cursor: pointer;
 }
 
 /* Hover item color */
-.fa:hover {
-    background-color: var(--comp-color);
+#footerWindow li a:hover {
+    color: #20C20E;
 }
 
 /*----------------------------------------------------------------------------*/

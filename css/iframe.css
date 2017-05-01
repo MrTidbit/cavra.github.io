@@ -22,11 +22,11 @@ html {
 
 /* Custom Highlight Color (Hacker green on black) */
 ::selection { /* Common browsers */
-    background-color: #000000;
+    background-color: #0000FF;
     color: #20C20E;
 }
 ::-moz-selection { /* Firefox browsers */
-    background-color: #000000;
+    background-color: #0000FF;
     color: #20C20E;
 }
 /*----------------------------------------------------------------------------*/
@@ -45,7 +45,7 @@ body {
     overflow: auto;
     
     font-family: 'Chairo';
-    color: var(--main-text-color);
+    color: #20C20E;
 }
 
 /* Profile Picture */
