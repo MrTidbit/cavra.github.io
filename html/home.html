@@ -11,23 +11,22 @@
 		<!-- Add stylesheets and libraries -->
 		<link rel="stylesheet" type="text/css" href="../css/iframe.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		
-		<!-- Typed Script -->
-		<script src="../js/typed.js"></script>
-		<script>
-			document.addEventListener("DOMContentLoaded", function(){
-				Typed.new(".typed", {
-					strings: ["Hi.", "I'm Cory.", "Welcome to my website"],
-					typeSpeed: 0
-				});
-			});
-		</script>
-
 	</head>
 
 	<body>
+		<h1>Hi. I'm Cory.</h1>
+		<div id="msg"/>
+			Hi, this is a message. I'm about to crack some eggs. 
+		</div>
 
+		<script>
+			$(function () {
+			  showText("#msg", "Hello, World!", 0, 500);
+			}
+		</script>
 
-		<span class="typed"></span>
+		<!-- Scripts (Keep down here for optimal loading times!) -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script src="js/content.js"></script>
 	</body>
 </html>
