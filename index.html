@@ -18,7 +18,6 @@
 		<div id="headerContainer" class="container">
 			<div id="headerWindow" class="window">
 				<ul>
-					<li class="iconTab">CA</li>
 					<li onclick="setSource('html/home.html')">Home</li>
 					<li onclick="setSource('html/about.html')">About</li>
 					<li onclick="setSource('html/resume.html')">Resume</li>
@@ -29,20 +28,20 @@
 		</div>
 
 		<!-- Sidebar -->
-		<div id="sideBarContainer" class="container">
+<!-- 		<div id="sideBarContainer" class="container">
 			<div id="sideBarWindow" class="window">
 			</div>
-		</div>
+		</div> -->
 
 		<!-- Content -->
 		<div id="contentContainer" class="container">
 			<div id="contentWindow" class="window">
-				<iframe id="contentFrame" src="html/home.html" onload="iFrameResize()"></iframe>
+				<iframe id="contentFrame"></iframe>
 			</div>
 		</div>
 
 		<!-- Footer -->
-		<!-- <div id="footerContainer" class="container">
+		<div id="footerContainer" class="container">
 			<div id="footerWindow" class="window">
 				<ul>
 					<li><a href="https://www.facebook.com/cory.avra" class="fa fa-facebook"></a></li>
@@ -52,9 +51,11 @@
 					<li><a href="https://github.com/cavra" class="fa fa-github"></a></li>
 				</ul>
 			</div>
-		</div> -->
+		</div>
 
 		<!-- Scripts (Keep down here for optimal loading times!) -->
-		<script src="js/iframe.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script src="js/content.js"></script>
+		<script>setSource("html/home.html");</script>
 	</body>
 </html>

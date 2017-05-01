@@ -11,12 +11,23 @@
 		<!-- Add stylesheets and libraries -->
 		<link rel="stylesheet" type="text/css" href="../css/iframe.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<!-- Typed Script -->
+		<script src="../js/typed.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function(){
+				Typed.new(".typed", {
+					strings: ["Hi.", "I'm Cory.", "Welcome to my website"],
+					typeSpeed: 0
+				});
+			});
+		</script>
+
 	</head>
 
 	<body>
-		<img id="profilePic" src="../images/profile.png" alt="Profile Picture">
-		<h1>Hi. I'm Cory.</h1>
-		<h3>I write code.</h3>
-		<h6>Follow me on </h6>
+
+
+		<span class="typed"></span>
 	</body>
 </html>
