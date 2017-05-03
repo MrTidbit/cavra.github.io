@@ -3,20 +3,22 @@
 /*----------------------------------------------------------------------------*/
 
 /* Background */
-html {}
+html {
+    background-color: var(--theme-color-3);
+}
 
 /* Zelda Font! (Need to change, doesn't actually display?) */
 @font-face { 
     font-family: Chairo; src: url('../font/Chairo.otf'); 
 } 
 
-/* Color Variables from http://www.colorcombos.com/color-schemes/194/ColorCombo194.html */
+/* Color Variables from http://www.color-hex.com/color-palette/389 */
 :root {
-  --main-color: #242E35;
-  --comp-color: #4A7B6F;
-  --main-text-color: #EEEEE7;
-  --main-bg-color: #CCDDDD;
-  --main-transparent-color: rgba(36, 46, 53, 0.3);
+  --theme-color-1: #F48EC1;
+  --theme-color-2: #A0C1B8;
+  --theme-color-3: #709FB0;
+  --theme-color-4: #726A95;
+  --theme-color-5: #351F39;
 }
 
 /* Custom Highlight Color (Hacker green on black) */
@@ -42,6 +44,8 @@ body {
 
 /* Container Class */
 .container {
+    background-color: white;
+    color: black;
 }
 
 /* Window Class */
@@ -70,31 +74,34 @@ body {
 
 /* Navigation Bar Unordered List */
 #headerWindow ul {
-    list-style-type: none;
     margin: 0;
     padding: 0;
+    list-style-type: none;
     overflow: hidden;
 }
 
 /* List Item Navigation Links */
 #headerWindow li {
-    margin: 10px 20px;
-    padding: 4px 10px;
+    margin: 0px 20px;
+    padding: 10px 15px;
 
     display: inline-block;
     vertical-align: middle;
     text-align: center;
 
-    background-color: transparent;
-    color: black;
-
     text-decoration: none;
     cursor: pointer;
+
+    transition: all 0.5s ease;
 }
 
 /* Hover item color */
 #headerWindow li:hover {
-    color: #20C20E;    
+    color: white;
+ text-shadow: 2px 2px 10px #000,
+             -2px -2px 10px #000,
+             -2px 2px 10px #000,
+              2px -2px 10px #000;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -123,6 +130,8 @@ body {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 5px 3px 30px black;
+
+    draggable: true;
 }
 
 /* Content Window */
@@ -134,8 +143,7 @@ body {
     height: 100%;
     text-align: center;
 
-    background-color: black;
-    color: red;
+    background-color: var(--theme-color-5);
 }
 
 /* Content Window Header */
@@ -149,7 +157,6 @@ body {
     text-align: center;
 
     background-color: #f2f7ff;
-    color: black;
 }
 
 /* iFrame */
@@ -174,6 +181,9 @@ body {
 
 /* Footer Container */
 #footerContainer {
+    padding: 0px;
+    margin: 0px;
+
     position: fixed;
     bottom: 0;
     right: 0;
@@ -192,37 +202,49 @@ body {
 
 /* Footer unordered list */
 #footerWindow ul {
-    list-style-type: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
+
+    list-style-type: none;
     overflow: hidden;
 }
 
 /* List item */
 #footerWindow li {
-    margin: 0px;
     padding: 0px;
+    margin: 10px 5px;
 
     display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 20px;
-
-    cursor: pointer;
 }
 
 /* List item */
 #footerWindow li a {
-    padding: 15px;
-    width: 15px;
+    padding: 10px;
+    margin: 0px;
+
+    width: 20px;
+    height: 20px;
+
+    display: inline-block;
+    vertical-align: bottom; 
+    text-align: center;
+
     text-decoration: none;
-    color: black;
     cursor: pointer;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    border-radius: 10px;
+    color: black; 
+    transition: all 0.5s ease;
 }
 
 /* Hover item color */
 #footerWindow li a:hover {
-    color: #20C20E;
+    background-color: blue;
+    color: white;
+box-shadow: 0px 9px 15px 5px #888888;
 }
 
 /*----------------------------------------------------------------------------*/
