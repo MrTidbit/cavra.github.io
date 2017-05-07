@@ -6,12 +6,8 @@
 html {
     height: 100%;
     width: 100%;
-    background-color: transparent;
+    background-color: #7070b0;
 }
-
-/* Zelda Font! */
-/*@font-face { font-family: Chairo; src: url('../font/Chairo.otf'); } 
-*/
 
 /* Custom Highlight Color (Hacker green on black) */
 ::selection { /* Common browsers */
@@ -34,21 +30,42 @@ body {
     margin: 0;
     padding: 0;
 
-    height: auto;
+    height: 100%;
     overflow: auto;
     
-    font-family: 'Chairo';
+    font-family: "Roboto", sans-serif;
+}
+
+/* Content Window Header */
+#header {
+    margin: 0px;
+    padding: 0px;
+
+    display: block;
+    width: 100% auto;
+    height: 25px;
+
+    text-align: center;
+    line-height: 25px;
+
+    background-color: #f2f7ff;
 }
 
 /* Profile Picture */
 #profilePic {
     margin: 15px;
+    padding: 0px;
 
 	border-radius: 100%;
     border: 1px solid black;
 	width: 150px;
 	height: 150px;
     float: left;
+}
+
+h1 {
+    font-weight: thin;
+    letter-spacing: 3px;
 }
 
 /*----------------------------------------------------------------------------*/

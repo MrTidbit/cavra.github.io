@@ -8,10 +8,11 @@ html {
 }
 
 /* Zelda Font! (Need to change, doesn't actually display?) */
-@font-face { 
-    font-family: Chairo; src: url('../font/Chairo.otf'); 
+/*@font-face { 
+    src: url('https://fonts.googleapis.com/css?family=Raleway'); 
 } 
 
+*/
 /* Color Variables from http://www.color-hex.com/color-palette/389 */
 :root {
   --theme-color-1: #F48EC1;
@@ -39,12 +40,11 @@ body {
     width: 100%;
     height: 100%;
 
-    font-family: 'Chairo';
+    font-family: "Alegreya Sans SC", sans-serif;
 }
 
 /* Container Class */
 .container {
-    background-color: white;
     color: black;
 }
 
@@ -61,6 +61,7 @@ body {
 
 /* Header Container */
 #headerContainer {
+    background-color: rgba(255, 255, 255, 0.5);
     position: relative;
     overflow: hidden;
 }
@@ -70,6 +71,10 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    font-size: 15px;
+    font-weight: thin;
+    letter-spacing: 5px;
+    text-transform: uppercase;
 }
 
 /* Navigation Bar Unordered List */
@@ -82,8 +87,12 @@ body {
 
 /* List Item Navigation Links */
 #headerWindow li {
-    margin: 0px 20px;
-    padding: 10px 15px;
+    margin: 10px 20px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 
     display: inline-block;
     vertical-align: middle;
@@ -93,15 +102,13 @@ body {
     cursor: pointer;
 
     transition: all 0.5s ease;
+    border-bottom: 1px solid transparent;
 }
 
 /* Hover item color */
 #headerWindow li:hover {
-    color: white;
- text-shadow: 2px 2px 10px #000,
-             -2px -2px 10px #000,
-             -2px 2px 10px #000,
-              2px -2px 10px #000;
+    opacity: 0.5;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 /*----------------------------------------------------------------------------*/
@@ -130,8 +137,6 @@ body {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 5px 3px 30px black;
-
-    draggable: true;
 }
 
 /* Content Window */
@@ -142,21 +147,6 @@ body {
     width: 100% auto;
     height: 100%;
     text-align: center;
-
-    background-color: var(--theme-color-5);
-}
-
-/* Content Window Header */
-#contentWindowHeader {
-    margin: 0px;
-    padding: 0px;
-
-    display: block;
-    width: 100% auto;
-    height: 25px;
-    text-align: center;
-
-    background-color: #f2f7ff;
 }
 
 /* iFrame */
@@ -219,7 +209,7 @@ body {
 
 /* List item */
 #footerWindow li a {
-    padding: 10px;
+    padding: 8px;
     margin: 0px;
 
     width: 20px;
@@ -235,16 +225,16 @@ body {
     font-size: 20px;
     line-height: 20px;
 
-    border-radius: 10px;
     color: black; 
+    border-radius: 10px;
+
     transition: all 0.5s ease;
+    border-bottom: 1px solid transparent;
 }
 
 /* Hover item color */
 #footerWindow li a:hover {
-    background-color: blue;
-    color: white;
-box-shadow: 0px 9px 15px 5px #888888;
+    opacity: 0.5;
 }
 
 /*----------------------------------------------------------------------------*/
