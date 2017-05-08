@@ -7,12 +7,6 @@ html {
     background-color: var(--theme-color-3);
 }
 
-/* Zelda Font! (Need to change, doesn't actually display?) */
-/*@font-face { 
-    src: url('https://fonts.googleapis.com/css?family=Raleway'); 
-} 
-
-*/
 /* Color Variables from http://www.color-hex.com/color-palette/389 */
 :root {
   --theme-color-1: #F48EC1;
@@ -32,6 +26,11 @@ html {
     color: #20C20E;
 }
 
+@font-face {
+  font-family: 'Chairo'; /*testing*/
+  src: url(font/chairo.otf);
+}
+
 /* Body */
 body {
     margin: 0;
@@ -40,7 +39,7 @@ body {
     width: 100%;
     height: 100%;
 
-    font-family: "Alegreya Sans SC", sans-serif;
+    font-family: "Chairo", sans-serif;
 }
 
 /* Container Class */
@@ -147,6 +146,7 @@ body {
     width: 100% auto;
     height: 100%;
     text-align: center;
+
 }
 
 /* iFrame */
