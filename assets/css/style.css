@@ -1,0 +1,229 @@
+/*----------------------------------------------------------------------------*/
+/* Global Stuff */
+/*----------------------------------------------------------------------------*/
+
+html {
+    /*background-color: var(--theme-color-1);*/
+}
+
+/* Color Variables from http://www.color-hex.com/color-palette/389 */
+:root {
+  --theme-color-1: #FFF8E7;
+  --theme-color-2: #B99D58;
+  --theme-color-3: #FF8E4E;
+  --theme-color-4: #7E6831;
+  --theme-color-5: #7D5900;
+}
+
+/* Custom Highlight Color (Hacker green on black) */
+::selection { /* Common browsers */
+    background-color: #000000;
+    color: #20C20E;
+}
+::-moz-selection { /* Firefox browsers */
+    background-color: #000000;
+    color: #20C20E;
+}
+
+@font-face {
+  font-family: 'Chairo'; /*testing*/
+  src: url(../font/chairo.otf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+
+    font-family: "Chairo", sans-serif;
+}
+
+h1 {
+    letter-spacing: 7px;
+}
+h5 {
+    letter-spacing: 3px;
+}
+
+/*----------------------------------------------------------------------------*/
+/* Hero Image */
+/*----------------------------------------------------------------------------*/
+
+.hero-container {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+
+    margin: 0px;
+    padding: 0px;
+
+    width: 100%;
+    height: 250px;
+
+    overflow: hidden;
+}
+
+.hero-image {
+    background-image: url('../img/hero-image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    height: 250px;
+
+    -webkit-filter: sepia(50%) brightness(70%); /* Safari 6.0 - 9.0 */
+    filter: sepia(50%) brightness(90%);
+}
+
+.hero-text {
+    font-weight: thin;
+    text-transform: uppercase;
+
+    color: white;
+
+    transform: translateY(-55%);
+
+    text-align: center;
+    width: 100%;
+    height: 400px;
+}
+
+/*----------------------------------------------------------------------------*/
+/* Navigation Bar */
+/*----------------------------------------------------------------------------*/
+
+.nav-container {
+    position: fixed;
+    top: 275px;
+    left: 25px;
+    margin: 0px;
+    padding: 0px;
+
+    width: 100px;
+    border-radius: 4px;
+}
+
+.nav-container ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.nav-container li {
+    margin-bottom: 5px;
+    width: 100%;
+    height: 40px;
+}
+
+.nav-container a {
+    padding-left: 15px;
+
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+
+    display: inline-block;
+    background-color: gray;
+    text-decoration: none;
+    color: black;
+
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-left: 1px solid transparent;
+}
+
+.nav-container a:hover {
+    opacity: 0.5;
+    border-left: 2px solid black;
+}
+
+/*----------------------------------------------------------------------------*/
+/* Content */
+/*----------------------------------------------------------------------------*/
+
+.content-container {
+    margin: 0px;
+    padding: 0px;
+
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.content-wrapper {
+    margin: auto;
+    padding: 0px;
+
+    width: 60%;
+}
+
+/*----------------------------------------------------------------------------*/
+/* Footer */
+/*----------------------------------------------------------------------------*/
+
+.footer-container {
+    padding: 0px;
+    margin: 0px;
+
+    background-color: gray;
+
+    text-align: center;
+    overflow: hidden;
+}
+
+.footer-container ul {
+    padding: 0;
+    margin: 0;
+
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.footer-container li {
+    padding: 0px;
+    margin: 10px 5px;
+
+    display: inline-block;
+}
+
+.footer-container li a {
+    padding: 8px;
+    margin: 0px;
+
+    width: 20px;
+    height: 20px;
+
+    display: inline-block;
+    vertical-align: bottom;
+    text-align: center;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    color: black;
+    border-radius: 10px;
+
+    transition: all 0.5s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-container li a:hover {
+    opacity: 0.5;
+}
+
+/*----------------------------------------------------------------------------*/
+/* Responsiveness */
+/*----------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 640px) {
+    .nav-container {
+        display: none;
+    }
+}

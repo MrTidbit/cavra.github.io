@@ -1,58 +1,72 @@
 <!DOCTYPE html>
 <html lang='en'>
 
-	<head>
-    	<meta charset='UTF-8' />
+<head>
+	<meta charset='UTF-8' />
 
-		<!-- Set website title and icon -->
-		<title>Cory Avra</title>
-		<link rel="icon" href="images/favicon.png">
+	<!-- Website title and icon -->
+	<title>Cory Avra</title>
+	<link rel='icon' href='assets/img/favicon.png'>
 
-		<!-- Add stylesheets and libraries -->
-		<link rel="stylesheet" type="text/css" href="css/style-1.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Roboto" rel="stylesheet">
+	<!--  Stylesheets and libraries -->
+	<link rel='stylesheet' type='text/css' href='assets/css/style.css'>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+	<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Roboto' rel='stylesheet'>
 
-	</head>
-
-	<body>
-		<!-- Header -->
-		<div id="headerContainer" class="container">
-			<div id="headerWindow" class="window">
-				<ul>
-					<li onclick="setSource('html/home.html')">Home</li>
-					<li onclick="setSource('html/about.html')">About</li>
-					<li onclick="setSource('html/resume.html')">Resume</li>
-					<li onclick="setSource('html/work.html')">Work</li>
-					<li onclick="setSource('html/contact.html')">Contact</li>
-				</ul>
-			</div>
+</head>
+<body>
+	<!-- Hero Section -->
+	<div class='hero-container'>
+		<div class='hero-image'></div>
+		<div class='hero-text'>
+			<h1>Hello, World</h1>
+			<h5>My name is Cory Avra</h5>
+			<h5>I'm a developer</h5>
 		</div>
+	</div>
 
-		<!-- Content -->
-		<div id="contentContainer" class="container">
-			<div id="contentWindow" class="window">
-				<iframe id="contentFrame"></iframe>
-			</div>
+	<!-- Navigation Side Bar Section -->
+	<div class='nav-container'>
+		<ul>
+			<li><a href='#top'>About</a></li>
+			<li><a href='#top'>Experience</a></li>
+			<li><a href='#top'>Skills</a></li>
+			<li><a href='#top'>Projects</a></li>
+			<li><a href='#top'>Contact</a></li>
+		</ul>
+	</div>
+
+	<!-- Content Section -->
+	<div class='content-container'>
+		<div class='content-wrapper'>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae mi dui. Nulla id sodales odio, nec sollicitudin risus. Nunc quis sem eget quam hendrerit porta. Fusce aliquam maximus nunc, eu ornare felis consectetur eget. Maecenas consequat, magna a iaculis tempus, dolor nisl ullamcorper dolor, in facilisis neque libero in diam. Phasellus fermentum, eros et congue varius, sem augue vulputate mi, at malesuada augue sapien a mauris. Phasellus odio ipsum, mollis quis sem eget, aliquam euismod massa. Ut ante leo, laoreet a ornare congue, suscipit in metus. Proin tincidunt neque vehicula congue aliquet.
+
+				Etiam et ex lacinia, cursus lectus sit amet, commodo est. Aliquam iaculis convallis rutrum. Ut massa magna, suscipit sed dapibus at, dignissim in diam. Duis rhoncus eleifend tincidunt. Pellentesque in congue lectus, quis cursus lacus. Fusce bibendum metus nec odio ullamcorper cursus. Aliquam consequat placerat magna ac viverra. Aliquam at nibh diam. Vivamus lorem libero, mollis ut ipsum sit amet, consectetur rutrum tortor.
+
+				Mauris turpis neque, placerat eu lacus ut, rutrum venenatis eros. Suspendisse ac ante consectetur, consequat elit at, fringilla sem. In euismod tempor accumsan. In hac habitasse platea dictumst. Ut molestie cursus orci, eget interdum sapien pellentesque vel. Fusce odio mi, semper non condimentum et, fermentum quis libero. Cras sollicitudin quam tempus consectetur consequat. Donec sit amet tempus erat. Phasellus ex odio, posuere et accumsan quis, ultrices pulvinar est. Nulla sed est at arcu condimentum eleifend sit amet cursus ipsum. Mauris vel turpis ut turpis mollis bibendum ut in velit. Mauris neque leo, facilisis non bibendum sit amet, pellentesque a dui. Nam viverra, mauris eu pellentesque feugiat, elit ante viverra urna, vel varius neque elit ac erat. Quisque vitae ante sagittis, faucibus sapien et, ultricies elit.
+
+				Donec condimentum nisl arcu, a blandit neque aliquet sit amet. Pellentesque quis pretium nibh, vitae commodo ipsum. Phasellus sed lacinia lacus. Vestibulum elementum rutrum lorem, eu vulputate leo blandit nec. Vivamus ornare non tortor ac semper. Aenean a aliquam ex. Curabitur elit diam, euismod molestie ornare ut, tempor at lorem. Nulla luctus erat sed diam semper, vel tempor augue ornare. Ut eu mi non odio scelerisque fringilla.
+
+				Etiam nec rhoncus elit, eu luctus nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi non tortor non nibh luctus malesuada nec vel sapien. Etiam a diam ut odio hendrerit accumsan. Suspendisse pulvinar sed eros a maximus. Nulla posuere, felis nec posuere dapibus, nulla odio dictum dolor, hendrerit ultrices ante elit ut magna. Nunc porttitor pharetra mauris tempor pulvinar. Curabitur maximus nisl eu ante placerat volutpat. Ut posuere libero non dapibus ultricies. Nulla congue leo vel nunc mattis, vitae cursus dui suscipit. Mauris at enim sit amet neque malesuada commodo finibus sit amet nunc. Aliquam semper est quis orci mollis finibus. Sed a tincidunt lacus. Cras non laoreet ante.
+			</p>
 		</div>
+	</div>
 
-		<!-- Footer -->
-		<!-- <div id="footerContainer" class="container">
-			<div id="footerWindow" class="window">
-				<ul>
-					<li><a href="mailto:coryavra@gmail.com?subject=Hello!" class="fa fa-envelope" title="Email"></a></li>
-					<li><a href="https://www.facebook.com/cory.avra" class="fa fa-facebook" title="Facebook"></a></li>
-					<li><a href="https://twitter.com/Just_Avrage" class="fa fa-twitter" title="Twitter"></a></li>
-					<li><a href="https://www.instagram.com/cory.avra/" class="fa fa-instagram" title="Instagram"></a></li>
-					<li><a href="https://www.linkedin.com/in/cory-avra/" class="fa fa-linkedin" title="LinkedIn"></a></li>
-					<li><a href="https://github.com/cavra" class="fa fa-github" title="Github"></a></li>
-				</ul>
-			</div>
-		</div> -->
+	<!-- Footer Section -->
+	<div class='footer-container'>
+		<ul>
+			<li><a href='mailto:coryavra@gmail.com' class='fa fa-envelope' title='Email'></a></li>
+			<li><a href='https://www.facebook.com/cory.avra' class='fa fa-facebook' title='Facebook'></a></li>
+			<li><a href='https://twitter.com/CoryAvra' class='fa fa-twitter' title='Twitter'></a></li>
+			<li><a href='https://www.instagram.com/cory.avra/' class='fa fa-instagram' title='Instagram'></a></li>
+			<li><a href='https://www.linkedin.com/in/cory-avra/' class='fa fa-linkedin' title='LinkedIn'></a></li>
+			<li><a href='https://github.com/cavra' class='fa fa-github' title='Github'></a></li>
+		</ul>
+	</div>
 
-		<!-- Scripts (Keep down here for optimal loading times!) -->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-		<script src="js/content.js"></script>
-		<script>setSource("html/home.html");</script>
-	</body>
+	<!-- Scripts (Keep down here for optimal loading times!) -->
+	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'></script>
+	<script src='assets/js/functions.js'></script>
+</body>
 </html>
