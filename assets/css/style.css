@@ -1,98 +1,95 @@
 /*----------------------------------------------------------------------------*/
 /* Global Stuff */
 /*----------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400');
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+
+/* Custom Variables */
+:root {
+    --font-title: 'IBM Plex Serif', serif;
+    --font-heading: 'Lato', sans-serif;
+    --font-body: 'Raleway', sans-serif;
+
+    --color-background-primary: #4c4a4a;
+    --color-background-secondary: #222222;
+    --color-background-tertiary: #e6e6e6;
+
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #a5a5a5;
+
+    --color-accent: #00ffff;
+    --color-gradient: linear-gradient(to bottom right, #000099 0%, #00ffcc 100%);
+
+    --color-hacker-green: #20c20e;
+    --color-hacker-blue: #0d2698;
+}
+
+/* Generic settings */
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--color-tertiary-2);
-    color: var(--color-tertiary-4);
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
 
-    font-family: 'Raleway', sans-serif;
-}
-
-/* Custom Variables */
-:root {
-  --color-primary: #222222;
-  --color-secondary: #e6e6e6;
-  --color-tertiary-1: #000000;
-  --color-tertiary-2: #4c4a4a;
-  --color-tertiary-3: #a5a5a5;
-  --color-tertiary-4: #ffffff;
-  --color-hacker-green: #20C20E;
+    font-family: var(--font-body);
+    font-weight: 300;
+    line-height: 1.75;
 }
 
 /* Custom Highlight Color */
 ::selection { /* Common browsers */
-    background-color: #000000;
+    background-color: var(--color-hacker-blue);
     color: var(--color-hacker-green);
 }
 ::-moz-selection { /* Firefox browsers */
-    background-color: #000000;
+    background-color: var(--color-hacker-blue);
     color: var(--color-hacker-green);
 }
 
 /* Custom Headers */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lato', sans-serif;
+.title {
+    font-family: var(--font-title);
+    font-weight: 400;
     letter-spacing: 1px;
-    font-weight: 100;
 }
-h1 {
-    font-size: 32px;
-    letter-spacing: 7px;
-}
-h2 {
-    font-size: 24px;
-    letter-spacing: 4px;
-}
-h3 {
-    font-size: 14px;
+.heading {
+    font-family: var(--font-heading);
 }
 
 /* Custom Links */
 a {
-    color: var(--color-tertiary-4);
+    color: var(--color-text-primary);
 }
 a:hover {
-    color: var(--color-tertiary-3);
+    color: var(--color-text-secondary);
 }
 
-/* Custom Text Formats */
-.text-line {
+/*----------------------------------------------------------------------------*/
+/* Gradient */
+/*----------------------------------------------------------------------------*/
+.gradient {
     width: 100%;
-    margin-bottom: 10px;
-    display: inline-block;
-}
-.right {
-    float: right;
-    font-weight: 100;
-    font-style: italic;
-}
-.left {
-    float: left;
-}
-.bold {
-    font-weight: 500;
-}
-.thin {
-    font-weight: 100;
+    height: 10%;
+    background: var(--color-gradient);
 }
 
 /*----------------------------------------------------------------------------*/
 /* Header */
 /*----------------------------------------------------------------------------*/
 .header {
-    background-color: var(--color-primary);
+    background-color: var(--color-background-secondary);
     position: fixed;
     top: 0px;
     width: 100%;
+    z-index: 1000;
 }
 .header a {
     padding: 10px;
     float: left;
-    color: var(--color-tertiary-4);
+    color: var(--color-text-primary);
     text-decoration: none;
 }
 .header ul {
@@ -117,7 +114,7 @@ a:hover {
     border-bottom: 3px solid transparent;
 }
 .header li a:hover {
-    border-bottom-color: var(--color-tertiary-3);
+    border-bottom-color: var(--color-accent);
 }
 #header-logo {
     padding: 5px;
@@ -130,51 +127,81 @@ a:hover {
 /* Sections */
 /*----------------------------------------------------------------------------*/
 .section {
-    margin: 0px 20%;
+    margin: 0px;
     padding: 0px;
+    width: 100%;
+    overflow: hidden;
 }
-.section .title::after {
-    margin-top: 10px;
+.section-wrapper {
+    margin: 0px auto;
+    padding: 100px 0px;
+    width: 80%;
+    overflow: auto;
+}
+.section .heading {
+    text-align: left;
+}
+.section .accent-line {
+    margin-top: -5px;
     content: "";
     display: block;
     width: 100px;
     height: 3px;
-    background-color: #00f6ff;
-}
-.section-inner {
+    background-color: var(--color-accent);
 }
 
 /*----------------------------------------------------------------------------*/
 /* Introduction Section */
 /*----------------------------------------------------------------------------*/
 #introduction {
-    margin-top: 100px;
+    /* background-image: url("../img/background.png");
+    background-size: cover; */
+    text-align: center;
+    width: 100%;
+    height: 100%;
 }
 #introduction h1 {
-    text-align: center;
-}
-#introduction img {
-    margin: auto;
-    display: block;
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
+    margin-top: 15%;
+    font-size: 64px;
+    letter-spacing: 3px;
 }
 #introduction h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
     text-align: center;
-    margin-bottom: 100px;
 }
 
 /*----------------------------------------------------------------------------*/
-/* Education Section */
+/* About Section */
 /*----------------------------------------------------------------------------*/
-#education {
+#about {
+    background-color: var(--color-background-secondary);
+}
+#about p {
+    float: left;
+    width: 65%;
+}
+#headshot-image {
+    margin-top: -30px;
+    margin-left: 30px;
+    float: right;
+    width: 30%;
+    border-radius: 100%;
+}
+
+/*----------------------------------------------------------------------------*/
+/* Services Section */
+/*----------------------------------------------------------------------------*/
+#services {
+
 }
 
 /*----------------------------------------------------------------------------*/
 /* Skills Section */
 /*----------------------------------------------------------------------------*/
 #skills {
+    background-color: var(--color-background-secondary);
 }
 
 /*----------------------------------------------------------------------------*/
@@ -187,12 +214,24 @@ a:hover {
 /* Projects Section */
 /*----------------------------------------------------------------------------*/
 #projects {
+    background-color: var(--color-background-secondary);
 }
+.panel {
+    margin-right: 15px;
 
-/*----------------------------------------------------------------------------*/
-/* Resume Section */
-/*----------------------------------------------------------------------------*/
-#resume {
+    width: 30%;
+    background-color: var(--color-background-tertiary);
+    border-radius: 7px;
+    color: black;
+    display: inline-block;
+    overflow: hidden;
+}
+.panel img {
+    width: 100%;
+
+}
+.panel .panel-content {
+    padding: 10px;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -200,11 +239,16 @@ a:hover {
 /*----------------------------------------------------------------------------*/
 #contact {
     margin-bottom: 50px;
+    text-align: center;
+}
+#contact .heading, #contact .accent-line {
+    margin: auto;
+    text-align: center;
 }
 input[type=text], input[type=email], textarea {
     margin: 10px 0px;
     padding: 12px;
-    width: 100%;
+    width: 60%;
 
     border: 0px solid gray;
     border-radius: 4px;
@@ -214,21 +258,25 @@ input[type=text], input[type=email], textarea {
 }
 textarea {
     min-height: 37px; /* 12 + 13 + 12 */
+    max-height: 400px;
     height: 100px;
 }
 input[type=text]:focus, input[type=email]:focus, textarea:focus {
     outline: none;
 }
 input[type=submit] {
-    background-color: #4CAF50;
+    margin: auto;
+    background-color: var(--color-accent);
     color: white;
     padding: 12px 20px;
     border: none;
+    display: block;
     border-radius: 4px;
     cursor: pointer;
 }
 input[type=submit]:hover {
-    background-color: #45a049;
+    color: black;
+    background-color: var(--color-accent);
 }
 
 /*----------------------------------------------------------------------------*/
@@ -240,14 +288,15 @@ input[type=submit]:hover {
     width: 100%;
     bottom: 0px;
 
-    background-color: var(--color-primary);
+    background: var(--color-background-secondary);
+    /* background: var(--color-gradient); */
 
     text-align: center;
     overflow: hidden;
 }
 .footer ul {
     padding: 0;
-    margin: 0;
+    margin-top: 10px;
 
     list-style-type: none;
     overflow: hidden;
@@ -256,7 +305,7 @@ input[type=submit]:hover {
     padding: 0px;
     margin: 10px 5px;
 
-    background-color: var(--color-tertiary-4);
+    background-color: var(--color-text-primary);
     width: 40px;
     height: 40px;
 
@@ -268,7 +317,7 @@ input[type=submit]:hover {
     opacity: 0.2;
 }
 .footer li a {
-    color: var(--color-primary);
+    color: var(--color-background-secondary);
     padding: 8px;
     margin: 0px;
     margin-top: 2px;
@@ -285,6 +334,10 @@ input[type=submit]:hover {
 }
 .footer li .fa-github {
     font-size: 25px;
+}
+.footer .copyright {
+    margin: 15px;
+    margin-bottom: 25px;
 }
 
 /*----------------------------------------------------------------------------*/
