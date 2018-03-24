@@ -10,15 +10,24 @@
 	<!--  Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115904629-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-115904629-1');
+	</script>
 </head>
 <body>
 	<div class="header">
 		<a id="header-logo" href="#introduction"><img src="assets/img/logo.png"></a>
 		<ul>
 			<li><a href="#about">About</a></li>
-			<li><a href="#services">What I do</a></li>
-			<li><a href="#skills">Skills</a></li>
-			<li><a href="#experience">Experience</a></li>
+			<!-- <li><a href="#services">What I do</a></li> -->
+			<!-- <li><a href="#skills">Skills</a></li> -->
+			<!-- <li><a href="#experience">Experience</a></li> -->
 			<li><a href="#projects">Projects</a></li>
 			<li><a href="#contact">Contact</a></li>
 		</ul>
@@ -27,24 +36,35 @@
 	<div class="section" id="introduction">
 			<h1 class="title">Cory Avra</h1>
 			<h3 class="heading">Full Stack Software Engineer</h3>
-			<button>Who am I?</button>
-			<button>Download my Resume</button>
-			<!-- <h4><< This site is currently under construction >></h4> -->
+			<a class="button" href="#about">Who am I?</a>
+			<a class="button" href="assets/docs/Cory Avra - Resume.pdf" target="_blank">Download my Resume</a>
 	</div>
 
 	<div class="section" id="about">
 		<div class="section-wrapper">
 			<h2 class="heading">About</h2>
 			<div class="accent-line"></div>
+			<h1 class="title">Hello World, I'm Cory.</h1>
+			<h3 class="heading">I'm a full stack software engineer, passionate about developing clean, organized, timeless code.</h3>
 			<img id="headshot-image" src="assets/img/headshot.png">
-			<h1>Hello World, I'm Cory.</h1>
-			<h3>Succinct Summary goes here</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>I graduated from Texas A&amp;M University in 2018 with a Bachelor of Science in computer science and a minor in business. I have professional experience in a variety of fields, including web development, mobile development, software development, cyber security, big data analytics, and more. Throughout all my endeavors, I strive to create efficient code complemented with sleek, intuitive interfaces.</p>
+			<p>Outside of my digital interests, I enjoy backpacking, skiing, scuba diving, and the occasional <span class="text-interest">skydive</span>.</p>
+			<p>A few noteworthy courses I've taken include:</p>
+			<ul class="taglist">
+				<li>Data Structures and Algorithms</li>
+				<li>Discrete Structures for Computing</li>
+				<li>Design and Analysis of Algorithms</li>
+				<li>Problem Solving Programming Strategies</li>
+				<li>Artificial Intelligence</li>
+				<li>Computer-Human Interaction</li>
+				<li>Computer and Network Security</li>
+				<li>Cloud Computing</li>
+				<li>Law and Policy in Cybersecurity</li>
+			</ul>
 		</div>
 	</div>
 
-	<div class="section" id="services">
+	<!-- <div class="section" id="services">
 		<div class="section-wrapper">
 			<h2 class="heading">What I do</h2>
 			<div class="accent-line"></div>
@@ -54,30 +74,33 @@
 			<p>Software Engineering (low-level languages, high level languages)</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
-	</div>
+	</div> -->
 
-	<div class="section" id="skills">
+	<!-- <div class="section" id="skills">
 		<div class="section-wrapper">
 			<h2 class="heading">Skills</h2>
 			<div class="accent-line"></div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<p>View my resume <a href="assets/docs/Cory Avra - Resume.pdf">here</a>.</p>
+			<h3>Software Development</h3>
+			<h3>Web Development</h3>
+			<h3>Tools</h3>
+			<h3>Knowledge</h3>
+			<p>You can view my resume <a href="assets/docs/Cory Avra - Resume.pdf" target="_blank">here</a>.</p>
 		</div>
-	</div>
+	</div> -->
 
-	<div class="section" id="experience">
+	<!-- <div class="section" id="experience">
 		<div class="section-wrapper">
 			<h2 class="heading">Experience</h2>
 			<div class="accent-line"></div>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="section" id="projects">
 		<div class="section-wrapper">
 			<h2 class="heading">Projects</h2>
 			<div class="accent-line"></div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			<div class="panel">
 				<img src="assets/img/tamu.png">
 				<div class="panel-content">
@@ -95,7 +118,7 @@
 				<div class="panel-content">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 				</div>
-			</div>
+			</div> -->
 			<p>You can see all my projects on my <a href="https://github.com/cavra">Github Account</a>.</p>
 		</div>
 	</div>
@@ -109,7 +132,7 @@
 				<input type="text" name="name" placeholder="Your Name" required>
 				<input type="email" name="_replyto" placeholder="Your Email" required>
 				<textarea name="message" placeholder="Message" required></textarea>
-				<input type="submit" value="Send">
+				<input class="button" type="submit" value="Send">
 			</form>
 		</div>
 	</div>

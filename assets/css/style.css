@@ -3,7 +3,7 @@
 /*----------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400');
 @import url('https://fonts.googleapis.com/css?family=Lato:300');
-@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100');
 
 /* Custom Variables */
 :root {
@@ -11,8 +11,8 @@
     --font-heading: 'Lato', sans-serif;
     --font-body: 'Raleway', sans-serif;
 
-    --color-background-primary: #4c4a4a;
-    --color-background-secondary: #222222;
+    --color-background-primary: #222222;
+    --color-background-secondary: #111111;
     --color-background-tertiary: #e6e6e6;
 
     --color-text-bright: #ffffff;
@@ -36,8 +36,8 @@ html, body {
     color: var(--color-text-bright);
 
     font-family: var(--font-body);
-    font-weight: 300;
     line-height: 1.75;
+    letter-spacing: 1px;
 }
 
 /* Custom Highlight Color */
@@ -58,6 +58,7 @@ html, body {
 }
 .heading {
     font-family: var(--font-heading);
+    letter-spacing: 1px;
 }
 
 /* Custom Links */
@@ -66,6 +67,57 @@ a {
 }
 a:hover {
     color: var(--color-text-bright-complement);
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: var(--color-background-primary);
+    display: inline;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    color: var(--color-text-bright);
+    cursor: pointer;
+}
+.button:hover {
+    color: var(--color-text-bright-complement);
+}
+.button:focus {
+    outline: none;
+}
+
+.text-interest {
+    color: var(--color-accent);
+    cursor: pointer;
+}
+.text-interest:hover {
+
+}
+.text-interest:hover:after {
+    margin-left: -100px;
+    margin-top: -150px;
+    position: absolute;
+    content: url(../img/skydiving.png);
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.taglist {
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    width: 70%;
+}
+.taglist li {
+    margin: 10px 5px;
+    padding: 5px 15px;
+    display: inline-block;
+    border: 1px solid var(--color-accent);
+    border-radius: 5px;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -136,15 +188,8 @@ a:hover {
 .section-wrapper {
     margin: 50px auto;
     padding: 50px;
-    width: 65%;
-    max-width: 85%;
+    width: 75%;
     overflow: auto;
-}
-.section-window {
-
-}
-.section .heading {
-    text-align: left;
 }
 .section .accent-line {
     margin-top: -5px;
@@ -190,12 +235,12 @@ a:hover {
     width: 65%;
 }
 #headshot-image {
-    margin-top: 30px;
-    margin-right: 15px;
-    float: left;
+    margin-top: 14px;
+    margin-left: 30px;
+    float: right;
     width: 30%;
     height: 50%;
-    border-radius: 15px;
+    border-radius: 100%;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -273,17 +318,10 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus {
 }
 input[type=submit] {
     margin: auto;
-    background-color: var(--color-accent);
-    color: var(--color-text-bright);
-    padding: 12px 20px;
-    border: none;
     display: block;
-    border-radius: 4px;
-    cursor: pointer;
 }
 input[type=submit]:hover {
-    background-color: var(--color-accent);
-    color: var(--color-text-bright-complement);
+    border-color: var(--color-text-bright-complement);
 }
 
 /*----------------------------------------------------------------------------*/
