@@ -110,7 +110,6 @@ a:hover {
     margin: 0px;
     padding: 0px;
     display: inline-block;
-    width: 70%;
 }
 .taglist li {
     margin: 10px 5px;
@@ -141,6 +140,7 @@ a:hover {
 }
 .header a {
     padding: 10px;
+    transition: all 0.2s ease;
     float: left;
     color: var(--color-text-bright);
     text-decoration: none;
@@ -170,10 +170,11 @@ a:hover {
     border-bottom-color: var(--color-accent);
 }
 #header-logo {
-    padding: 5px;
+    /* padding: 0px; */
 }
 #header-logo img {
     width: 45px;
+    display: block;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -241,6 +242,10 @@ a:hover {
     width: 30%;
     height: 50%;
     border-radius: 100%;
+    display: block;
+}
+#about .taglist {
+    width: 65%;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -342,9 +347,11 @@ input[type=submit]:hover {
 .footer ul {
     padding: 0;
     margin-top: 10px;
+    margin-bottom: 0px;
 
     list-style-type: none;
     overflow: hidden;
+    display: inline-block;
 }
 .footer li {
     padding: 0px;
@@ -381,15 +388,33 @@ input[type=submit]:hover {
     font-size: 25px;
 }
 .footer .copyright {
-    margin: 15px;
+    margin: 5px;
     margin-bottom: 25px;
 }
 
 /*----------------------------------------------------------------------------*/
 /* Responsiveness */
 /*----------------------------------------------------------------------------*/
-@media only screen and (max-width: 640px) {
-    .nav {
+@media only screen and (max-width: 800px) {
+    .header {
         display: none;
     }
+    .section-wrapper {
+        padding: 0px;
+        width: 90%;
+    }
+
+    /* About */
+    #about p {
+        width: 100%;
+    }
+    #headshot-image {
+        margin: 30px auto;
+        float: none;
+        width: 50%;
+    }
+    #about .taglist {
+        width: 100%;
+    }
+
 }
