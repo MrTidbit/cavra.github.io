@@ -3,7 +3,7 @@
 /*----------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400');
 @import url('https://fonts.googleapis.com/css?family=Lato:300');
-@import url('https://fonts.googleapis.com/css?family=Raleway:100');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
 
 /* Custom Variables */
 :root {
@@ -31,6 +31,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
+    min-width: 400px;
     height: 100%;
     background-color: var(--color-background-primary);
     color: var(--color-text-bright);
@@ -48,6 +49,10 @@ html, body {
 ::-moz-selection { /* Firefox browsers */
     background-color: var(--color-hacker-blue);
     color: var(--color-hacker-green);
+}
+
+*:focus {
+    outline: none;
 }
 
 /* Custom Headers */
@@ -74,7 +79,6 @@ a:hover {
     background-color: var(--color-background-primary);
     display: inline;
     border-radius: 4px;
-    cursor: pointer;
     text-decoration: none;
     transition: all 0.2s ease;
     color: var(--color-text-bright);
@@ -205,7 +209,7 @@ a:hover {
 /* Introduction Section */
 /*----------------------------------------------------------------------------*/
 #introduction {
-    background-image: url("../img/background2.jpg");
+    background-image: url("../img/background_sky.png");
     background-size: 100% 100%;
     background-color: #000000;
     text-align: center;
@@ -214,7 +218,7 @@ a:hover {
     color: var(--color-text-dark);
 }
 #introduction h1 {
-    margin-top: 150px;
+    margin-top: 10%;
     font-size: 64px;
     letter-spacing: 3px;
 }
@@ -252,7 +256,6 @@ a:hover {
 /* Services Section */
 /*----------------------------------------------------------------------------*/
 #services {
-
 }
 
 /*----------------------------------------------------------------------------*/
@@ -267,6 +270,39 @@ a:hover {
 /*----------------------------------------------------------------------------*/
 #experience {
 }
+#experience .line {
+    width: 100%;
+    display: inline-block;
+}
+#experience .job-title {
+    margin-bottom: 0px;
+    float: left;
+    display: inline-block;
+    font-weight: 400;
+}
+#experience .date {
+    margin-bottom: 0px;
+    float: right;
+    display: inline-block;
+    font-style: italic;
+}
+#experience .company {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    float: left;
+    display: inline-block;
+}
+#experience .location {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    float: right;
+    display: inline-block;
+    font-style: italic;
+}
+#experience .summary {
+    width: 100%;
+    display: inline-block;
+}
 
 /*----------------------------------------------------------------------------*/
 /* Projects Section */
@@ -274,59 +310,66 @@ a:hover {
 #projects {
     background-color: var(--color-background-secondary);
 }
-.panel {
-    margin-right: 15px;
-
-    width: 30%;
-    background-color: var(--color-background-tertiary);
-    border-radius: 7px;
-    color: black;
-    display: inline-block;
-    overflow: hidden;
-}
-.panel img {
+#projects .line {
     width: 100%;
+    display: inline-block;
 }
-.panel .panel-content {
-    padding: 10px;
+#projects .name {
+    margin-bottom: 0px;
+    float: left;
+    display: inline-block;
+    font-weight: 400;
+}
+#projects .date {
+    margin-bottom: 0px;
+    float: right;
+    display: inline-block;
+    font-style: italic;
 }
 
 /*----------------------------------------------------------------------------*/
 /* Contact Section */
 /*----------------------------------------------------------------------------*/
 #contact {
-    margin-bottom: 50px;
+    background-image: url("../img/background_stars2.jpg");
+    background-size: 100% 100%;
     text-align: center;
 }
 #contact .heading, #contact .accent-line {
     margin: auto;
-    text-align: center;
 }
-input[type=text], input[type=email], textarea {
+#contact input[type=text], input[type=email], textarea {
     margin: 10px 0px;
     padding: 12px;
     width: 60%;
 
     border: 0px solid gray;
     border-radius: 4px;
+    font-family: var(--font-body);
 
     box-sizing: border-box;
     resize: vertical;
 }
-textarea {
+#contact textarea {
     min-height: 37px; /* 12 + 13 + 12 */
     max-height: 400px;
     height: 100px;
 }
-input[type=text]:focus, input[type=email]:focus, textarea:focus {
+#contact input[type=text]:focus, input[type=email]:focus, textarea:focus {
     outline: none;
 }
-input[type=submit] {
+#contact input[type=submit] {
     margin: auto;
     display: block;
+    background-color: var(--color-background-tertiary);
+    color: var(--color-text-dark);
+    border: none;
+    font-family: var(--font-body);
+    font-size: 14px;
 }
-input[type=submit]:hover {
-    border-color: var(--color-text-bright-complement);
+#contact input[type=submit]:hover {
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-bright);
 }
 
 /*----------------------------------------------------------------------------*/
@@ -395,6 +438,12 @@ input[type=submit]:hover {
 /*----------------------------------------------------------------------------*/
 /* Responsiveness */
 /*----------------------------------------------------------------------------*/
+@media only screen and (max-width: 1200px) {
+    #about .taglist {
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 800px) {
     .header {
         display: none;
@@ -413,8 +462,4 @@ input[type=submit]:hover {
         float: none;
         width: 50%;
     }
-    #about .taglist {
-        width: 100%;
-    }
-
 }
