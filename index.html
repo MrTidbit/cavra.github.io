@@ -6,7 +6,7 @@
 
 	<!-- Website title and icon -->
 	<title>Cory Avra</title>
-	<link rel="icon" href="assets/img/favicon.png">
+	<link rel="icon" href="assets/img/logo.png">
 
 	<!--  Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -52,7 +52,15 @@
 			<img id="headshot-image" src="assets/img/headshot.png">
 
 			<p>I graduated from Texas A&amp;M University in 2018 with a Bachelor of Science in computer science and a minor in business. I have professional experience in a variety of fields, including web development, mobile development, software development, cyber security, big data analytics, and more. Throughout all my endeavors, I strive to create efficient code complemented with sleek, intuitive interfaces.</p>
-			<p>Outside of my digital interests, I enjoy backpacking, skiing, scuba diving, and the occasional <span class="text-interest">skydive</span>.</p>
+			<p>Outside of my digital interests, I also enjoy
+				<span class="text-popup">
+					<span data-id="popup_backpack">backpacking</span>,
+					<span data-id="popup_ski">skiing</span>,
+					<span data-id="popup_scuba">scuba diving</span>, and the occasional
+					<span data-id="popup_skydive">skydive</span>.
+				</span>
+				<div class="popup" style="display:none;">Popup</div>
+			</p>
 			<p>A few noteworthy courses I've taken include:</p>
 			<ul class="taglist">
 				<li>Data Structures and Algorithms</li>
@@ -148,6 +156,7 @@
 		<div class="section-wrapper">
 			<h2 class="heading">Experience</h2>
 			<div class="accent-line"></div>
+
 			<div class="line heading">
 				<h3 class="job-title">Associate Consultant</h3>
 				<h4 class="date">January 2018 - Present</h4>
@@ -156,11 +165,13 @@
 				<h4 class="company">Improving Enterprises</h4>
 				<h4 class="location">College Station, TX</h4>
 			</div>
-			<p class="summary">Developed responsive websites and applications. Created scripts to improve database storage and retrieval efficiency</p>
+			<p class="summary">As an Associate Consultant, I was responsible for defining deliverables, meeting deadlines, and working alongside clients to bring their vision to life. Most of my projects involved creating websites via Wordpress or maintaining web apps based on the MEAN Stack. To make my life (and the lives of my coworkers) easier, I wrote scripts to automate some of our more menial tasks.</p>
 			<ul class="taglist">
 				<li>Agile Methodologies</li>
 				<li>Google Analytics</li>
-				<li>Working with clients</li>
+				<li>Git / Github</li>
+				<li>Teamwork</li>
+				<li>Working with Clients</li>
 			</ul>
 
 			<div class="line heading">
@@ -171,9 +182,13 @@
 				<h4 class="company">Sabre Corporation</h4>
 				<h4 class="location">Dallas, TX</h4>
 			</div>
-			<p>Designed company brand elements to be used across all sites and programs. Built and maintained databases for internal confidential documents</p>
+			<p>As a Corporate Communications Web Developer, I worked alongside executives, creating tools for them to use for inter-company communication. One of the more notable tools was an HTML Email Template Generator, which allowed employees to submit their own content and recevie a styled HTML email in return.</p>
 			<ul class="taglist">
-				<li>Web Development</li>
+				<li>Bootstrap</li>
+				<li>jQuery</li>
+				<li>MySQL</li>
+				<li>PHP</li>
+				<li>Responsive Web Development</li>
 			</ul>
 
 			<div class="line heading">
@@ -184,9 +199,12 @@
 				<h4 class="company">Chick-fil-A</h4>
 				<h4 class="location">Houston, TX</h4>
 			</div>
-			<p>Responsible for guest service and food preparation</p>
+			<p>While it may not be related to computer science, I acquired many useful skills that I still use in the workplace today during my time as a Team Member at Chick-fil-A. I learned how to work efficiently in a fast-paced, stressful environment, how to resolve conflicts with customers, and how to work as a team. I also realized the importance of doing a job the right way, instead of the quick way.</p>
 			<ul class="taglist">
-				<li>Team skills</li>
+				<li>Fast Paced Environment</li>
+				<li>Quality over Quantity</li>
+				<li>Resolving Conflict</li>
+				<li>Teamwork</li>
 			</ul>
 
 			<div class="line heading">
@@ -197,10 +215,11 @@
 				<h4 class="company">Home Run Ministries</h4>
 				<h4 class="location">Houston, TX</h4>
 			</div>
-			<p>Taught Robotic Engineering and American Sign Language to children ages 5-13</p>
+			<p>As an advocate for integrating programming classes with the high school core cirriculum, I taught a robotic engineering course to elementary and middle school students using the programmable <a href="https://www.lego.com/en-us/mindstorms">Lego Mindstorms</a>. The purpose of this course was to program a robot that could successfully compete in <a href="http://www.firstlegoleague.org/">First Lego League</a>. During my last semester, I also taught the basics of American Sign Language.</p>
 			<ul class="taglist">
 				<li>ASL</li>
-				<li>Engineering</li>
+				<li>Robotic Engineering</li>
+				<li>Programming</li>
 			</ul>
 
 		</div>
@@ -213,20 +232,20 @@
 
 			<div class="line heading">
 				<h3 class="name">Digital Augmented & Alternative Communication Board</h3>
-				<h4 class="date">January 2018 - Present</h4>
+				<h4 class="date">2018</h4>
 			</div>
-			<p>Developed online tool to be used in hospitals and homes around the globe, Replaces physical AAC boards with digital, dynamic version, Harnesses data analytics and machine learning to make user-specific predictions</p>
+			<p>CommBo (<b>Comm</b>unication <b>Bo</b>ard) is an online tool designed to be used in hospitals and homes around the globe. It replace physical <span class="text-popup"><span data-id="popup-AAC">AAC boards</span></span> with a digital dynamic version. My teammates and I developed it using the MEAN Stack as our senior capstone project. It utilizes machine learning to make user-specific predictions based on time of day and the location of the user.</p>
 			<ul class="taglist">
-				<li>HTML</li>
-				<li>CSS</li>
+				<li>Machine Learning</li>
 				<li>MEAN Stack</li>
+				<li>Web App</li>
 			</ul>
 
 			<div class="line heading">
-				<h3 class="name">Competitive Research Database</h3>
+				<h3 class="name">Confidential Research Database Platform</h3>
 				<h4 class="date">2017</h4>
 			</div>
-			<p>Designed and built a website for showcasing confidential company reports and data. Used HTML, JavaScript/jQuery, CSS, PHP, and SQL</p>
+			<p>This web app was built for Sabre's intranet to share confidential documents with a specified employee audience. Documents had varying levels of confidentiality, which dictated what employees were able to see. I designed and built the entire thing alone as my intern project.</p>
 			<ul class="taglist">
 				<li>HTML</li>
 				<li>CSS</li>
@@ -237,24 +256,23 @@
 			</ul>
 
 			<div class="line heading">
-				<h3 class="name">HTML Email Template Generator</h3>
+				<h3 class="heading name">HTML Email Template Generator</h3>
 				<h4 class="date">2017</h4>
 			</div>
-			<p>A website for employees to create and download their own HTML email templates, using HTML, JavaScript/jQuery, CSS, PHP, and SQL</p>
+			<p>This application's primary purpose was to automate one of my most tedious jobs at Sabre: filling HTML email templates with body content. Before the app, if an executive wanted to send an official email (announcements, events, etc.) to the employee body, they had to wait for me to fill a template with their content and return it to them. Now, all they have to do is navigate to a URL, paste their message, and click a download button.</p>
 			<ul class="taglist">
 				<li>HTML</li>
 				<li>CSS</li>
 				<li>Javascript</li>
 				<li>jQuery</li>
 				<li>PHP</li>
-				<li>SQL</li>
 			</ul>
 
 			<div class="line heading">
 				<h3 class="name">Tumble Rumble</h3>
 				<h4 class="date">2016</h4>
 			</div>
-			<p>Created online multiplayer game where players fight for victory, Built with Socket.io, Node.js, and Phaser</p>
+			<p>Tumble Rumble is an online multiplayer game built with Socket.io, Node.js, and Phaser. It is based off a popular mobile app called "Flappy Bird," except it is western themed. It is hosted live <a href="http://tumblerumble.herokuapp.com/">here</a> (Note: as soon as the game begins, use the 'up' arrow key to jump!).</p>
 			<ul class="taglist">
 				<li>HTML</li>
 				<li>CSS</li>
@@ -268,10 +286,11 @@
 				<h3 class="name">Regional Database Management System</h3>
 				<h4 class="date">2016</h4>
 			</div>
-			<p>A generic RDBMS written in Java, using SQL commands generated from a user-friendly interactive system</p>
+			<p>A generic RDBMS (Regional Database Management System) written in Java, using psuedo-SQL commands generated from a user friendly CLI system. It follows a generic data model approach, allowing its users to define tables, primary keys, and relationships.</p>
 			<ul class="taglist">
+				<li>Databases</li>
 				<li>Java</li>
-				<li>Psuedo-SQL</li>
+				<li>SQL</li>
 			</ul>
 
 			<p>You can see all my projects on my <a href="https://github.com/cavra">Github Account</a>.</p>
@@ -287,7 +306,7 @@
 				<input type="text" name="name" placeholder="Your Name" required>
 				<input type="email" name="_replyto" placeholder="Your Email" required>
 				<textarea name="message" placeholder="Message" required></textarea>
-				<input class="button" type="submit" value="Send">
+				<button class="button" type="submit">Send</button>
 			</form>
 		</div>
 	</div>

@@ -20,6 +20,7 @@
     --color-text-dark: #000000;
 
     --color-accent: #20c20e;
+    --color-accent-complement: #1E7015;
     --color-gradient: linear-gradient(to bottom right, #000099 0%, #00ffcc 100%);
 
     --color-hacker-green: #20c20e;
@@ -31,7 +32,6 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    min-width: 400px;
     height: 100%;
     background-color: var(--color-background-primary);
     color: var(--color-text-bright);
@@ -51,6 +51,7 @@ html, body {
     color: var(--color-hacker-green);
 }
 
+/* Remvoe Focus Outline */
 *:focus {
     outline: none;
 }
@@ -68,10 +69,14 @@ html, body {
 
 /* Custom Links */
 a {
-    color: var(--color-text-bright);
+    color: var(--color-accent);
 }
 a:hover {
-    color: var(--color-text-bright-complement);
+    color: var(--color-accent-complement);
+}
+
+b {
+    color: var(--color-accent);
 }
 
 .button {
@@ -91,23 +96,23 @@ a:hover {
     outline: none;
 }
 
-.text-interest {
+.text-popup span {
     color: var(--color-accent);
     cursor: pointer;
 }
-.text-interest:hover {
-
+.text-popup span:hover {
+    color: var(--color-accent-complement);
 }
-.text-interest:hover:after {
-    margin-left: -100px;
-    margin-top: -150px;
+.popup {
     position: absolute;
-    content: url(../img/skydiving.png);
     width: 150px;
     height: 150px;
-    display: inline-block;
-    overflow: hidden;
     border-radius: 100%;
+    overflow: hidden;
+}
+.popup img {
+    width: 100%;
+    height: 100%;
 }
 
 .taglist {
@@ -278,7 +283,6 @@ a:hover {
     margin-bottom: 0px;
     float: left;
     display: inline-block;
-    font-weight: 400;
 }
 #experience .date {
     margin-bottom: 0px;
@@ -341,11 +345,10 @@ a:hover {
 #contact input[type=text], input[type=email], textarea {
     margin: 10px 0px;
     padding: 12px;
-    width: 60%;
+    width: 80%;
 
     border: 0px solid gray;
     border-radius: 4px;
-    font-family: var(--font-body);
 
     box-sizing: border-box;
     resize: vertical;
@@ -358,7 +361,7 @@ a:hover {
 #contact input[type=text]:focus, input[type=email]:focus, textarea:focus {
     outline: none;
 }
-#contact input[type=submit] {
+#contact .button {
     margin: auto;
     display: block;
     background-color: var(--color-background-tertiary);
@@ -367,7 +370,7 @@ a:hover {
     font-family: var(--font-body);
     font-size: 14px;
 }
-#contact input[type=submit]:hover {
+#contact .button:hover {
     background-color: var(--color-background-secondary);
     color: var(--color-text-bright);
 }
@@ -462,4 +465,50 @@ a:hover {
         float: none;
         width: 50%;
     }
+
+    #contact input[type=text], input[type=email], textarea {
+        width: 90%;
+}
+
+@media only screen and (max-width: 600px) {
+    #experience .job-title, #projects .name {
+        float: none;
+        display: block;
+    }
+    #experience .date, #projects .date {
+        margin-top: 0px;
+        float: none;
+        display: block;
+        font-size: 12px;
+    }
+    #experience .company {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        float: left;
+        display: inline-block;
+    }
+    #experience .location {
+        display: none;
+    }
+
+    .taglist li {
+        padding: 3px 10px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    #introduction h1 {
+        font-size: 32px;
+    }
+    #introduction h3 {
+        font-size: 14px;
+    }
+    #introduction .button {
+        display: block;
+        width: 50%;
+        margin: auto;
+        margin-top: 25px;
+    }
+
 }
