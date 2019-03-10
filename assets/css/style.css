@@ -11,17 +11,17 @@
     --font-heading: 'Lato', sans-serif;
     --font-body: 'Raleway', sans-serif;
 
-    --color-background-primary: #222222;
-    --color-background-secondary: #111111;
+    --color-background-primary: #121212;
+    --color-background-secondary: #000000;
     --color-background-tertiary: #e6e6e6;
 
     --color-text-bright: #ffffff;
+    --color-text-dim: #7c7c7c;
     --color-text-bright-complement: #a5a5a5;
     --color-text-dark: #000000;
 
     --color-accent: #20c20e;
     --color-accent-complement: #1E7015;
-    --color-gradient: linear-gradient(to bottom right, #000099 0%, #00ffcc 100%);
 
     --color-hacker-green: #20c20e;
     --color-hacker-blue: #0d2698;
@@ -81,7 +81,7 @@ b {
 
 .button {
     padding: 10px 20px;
-    background-color: var(--color-background-primary);
+    background-color: var(--color-background-secondary);
     display: inline;
     border-radius: 4px;
     text-decoration: none;
@@ -90,7 +90,7 @@ b {
     cursor: pointer;
 }
 .button:hover {
-    color: var(--color-text-bright-complement);
+    color: var(--color-text-dim);
 }
 .button:focus {
     outline: none;
@@ -214,34 +214,35 @@ b {
 /* Introduction Section */
 /*----------------------------------------------------------------------------*/
 #introduction {
-    background-image: url("../img/background_sky.png");
     background-size: 100% 100%;
-    background-color: #000000;
+    background-color: var(--color-background-primary);
     text-align: center;
     width: 100%;
     height: 100%;
-    color: var(--color-text-dark);
+    color: var(--color-text-bright);
 }
 #introduction h1 {
     margin-top: 10%;
+    margin-bottom: 10px;
     font-size: 64px;
     letter-spacing: 3px;
 }
 #introduction h3 {
     margin: auto;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     text-transform: uppercase;
     font-size: 20px;
     letter-spacing: 2px;
     text-align: center;
     max-width: 80%;
+    color: var(--color-text-dim);
 }
 
 /*----------------------------------------------------------------------------*/
 /* About Section */
 /*----------------------------------------------------------------------------*/
 #about {
-    background: linear-gradient(#000000, var(--color-background-primary));
+    background-color: var(--color-background-primary);
 }
 #about p {
     float: left;
@@ -255,28 +256,24 @@ b {
     height: 50%;
     border-radius: 100%;
     display: block;
+    max-width: 300px;
 }
 #about .taglist {
     width: 100%;
 }
 
 /*----------------------------------------------------------------------------*/
-/* Services Section */
-/*----------------------------------------------------------------------------*/
-#services {
-}
-
-/*----------------------------------------------------------------------------*/
 /* Skills Section */
 /*----------------------------------------------------------------------------*/
 #skills {
-    background-color: var(--color-background-secondary);
+    background-color: var(--color-background-primary);
 }
 
 /*----------------------------------------------------------------------------*/
 /* Experience Section */
 /*----------------------------------------------------------------------------*/
 #experience {
+    background-color: var(--color-background-primary);
 }
 #experience .line {
     width: 100%;
@@ -315,7 +312,7 @@ b {
 /* Projects Section */
 /*----------------------------------------------------------------------------*/
 #projects {
-    background-color: var(--color-background-secondary);
+    background-color: var(--color-background-primary);
 }
 #projects .line {
     width: 100%;
@@ -338,8 +335,7 @@ b {
 /* Contact Section */
 /*----------------------------------------------------------------------------*/
 #contact {
-    background-image: url("../img/background_stars2.jpg");
-    background-size: 100% 100%;
+    background-color: var(--color-background-primary);
     text-align: center;
 }
 #contact .heading, #contact .accent-line {
@@ -349,6 +345,7 @@ b {
     margin: 10px 0px;
     padding: 12px;
     width: 80%;
+    max-width: 600px;
 
     border: 0px solid gray;
     border-radius: 4px;
@@ -367,15 +364,9 @@ b {
 #contact .button {
     margin: auto;
     display: block;
-    background-color: var(--color-background-tertiary);
-    color: var(--color-text-dark);
     border: none;
     font-family: var(--font-body);
     font-size: 14px;
-}
-#contact .button:hover {
-    background-color: var(--color-background-secondary);
-    color: var(--color-text-bright);
 }
 
 /*----------------------------------------------------------------------------*/
