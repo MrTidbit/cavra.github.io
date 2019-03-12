@@ -452,6 +452,7 @@ b {
 }
 #contact .button {
     margin: auto;
+    margin-bottom: 40px;
     display: block;
     border: none;
     font-family: var(--font-body);
