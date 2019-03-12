@@ -41,38 +41,38 @@ $(document).ready(function() {
         });
     });
 
-    var typed = new Typed(".typed-1", {
-        strings: ["whoami^2000"],
-        typeSpeed: 100,
-        startDelay: 500,
-        onComplete: function() {
-            $('.typed-cursor').hide();
-            $('#terminal-response-1').show();
-            $('#terminal-prompt-2').show();
-
-            var typed = new Typed(".typed-2", {
-                strings: ["ls^1000"],
-                typeSpeed: 100,
-                startDelay: 2000,
-                onComplete: function() {
-                    $('.typed-cursor').hide();
-                    $('#terminal-response-2').show();
-                    $('#terminal-prompt-3').show();
-
-                    var typed = new Typed(".typed-3", {
-                        strings: ["cat about.txt^2000"],
-                        typeSpeed: 60,
-                        startDelay: 2000,
-                        onComplete: function() {
-                            $('.typed-cursor').hide();
-                            $('#terminal-response-3').show();
-                            $('#terminal-prompt-4').show();
-
-                        },
-                    });
-                },
-            });
-        },
-    });
+    // var typed = new Typed(".typed-1", {
+    //     strings: ["whoami^2000"],
+    //     typeSpeed: 100,
+    //     startDelay: 500,
+    //     onComplete: function() {
+    //         $('.typed-cursor').hide();
+    //         $('#terminal-response-1').show();
+    //         $('#terminal-prompt-2').show();
+    //
+    //         var typed = new Typed(".typed-2", {
+    //             strings: ["ls^1000"],
+    //             typeSpeed: 100,
+    //             startDelay: 2000,
+    //             onComplete: function() {
+    //                 $('.typed-cursor').hide();
+    //                 $('#terminal-response-2').show();
+    //                 $('#terminal-prompt-3').show();
+    //
+    //                 var typed = new Typed(".typed-3", {
+    //                     strings: ["cat about.txt^2000"],
+    //                     typeSpeed: 60,
+    //                     startDelay: 2000,
+    //                     onComplete: function() {
+    //                         $('.typed-cursor').hide();
+    //                         $('#terminal-response-3').show();
+    //                         $('#terminal-prompt-4').show();
+    //
+    //                     },
+    //                 });
+    //             },
+    //         });
+    //     },
+    // });
 
 });
